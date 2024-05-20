@@ -1,0 +1,237 @@
+**********************
+PowerShell transcript start
+Start time: 20211108062729
+Username: REDPANDA\nkriv_000
+RunAs User: REDPANDA\nkriv_000
+Configuration Name: 
+Machine: REDPANDA (Microsoft Windows NT 10.0.22000.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoProfile -NonInteractive -ExecutionPolicy Bypass -Command Import-Module 'c:\Users\nkriv_000\.vscode\extensions\ms-vscode.powershell-2021.10.2\modules\PowerShellEditorServices\PowerShellEditorServices.psd1'; Start-EditorServices -HostName 'Visual Studio Code Host' -HostProfileId 'Microsoft.VSCode' -HostVersion '2021.10.2' -AdditionalModules @('PowerShellEditorServices.VSCode') -BundledModulesPath 'c:\Users\nkriv_000\.vscode\extensions\ms-vscode.powershell-2021.10.2\modules' -EnableConsoleRepl -StartupBanner '=====> PowerShell Integrated Console v2021.10.2 <=====
+' -LogLevel 'Normal' -LogPath 'c:\Users\nkriv_000\.vscode\extensions\ms-vscode.powershell-2021.10.2\logs\1636372981-c47fea4c-f2a8-459e-931f-5b77dd505a471636372968890\EditorServices.log' -SessionDetailsPath 'c:\Users\nkriv_000\.vscode\extensions\ms-vscode.powershell-2021.10.2\sessions\PSES-VSCode-15576-909559' -FeatureFlags @() 
+Process ID: 10268
+PSVersion: 7.1.3
+PSEdition: Core
+GitCommitId: 7.1.3
+OS: Microsoft Windows 10.0.22000
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.10032.0, 6.0.0, 6.1.0, 6.2.0, 7.0.0, 7.1.3
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is X:\scripts\transcripts\Transcript1.txt
+PS X:\repos\csharp-blazor-bug-tracking> @{ 'computerName' = if ([Environment]::MachineName) {[Environment]::MachineName}  else {'localhost'}; 'processId' = $PID; 'instanceId' = $host.InstanceId }
+
+Name                           Value
+----                           -----
+computerName                   REDPANDA
+instanceId                     9f36eded-f7e4-4654-9733-39c8f37a48e9
+processId                      10268
+
+PS X:\repos\csharp-blazor-bug-tracking> Get-Service | where-object -Property Status -eq Stopped
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  AJRouter           AllJoyn Router Service
+Stopped  ALG                Application Layer Gateway Service
+Stopped  AppIDSvc           Application Identity
+Stopped  AppMgmt            Application Management
+Stopped  AppReadiness       App Readiness
+Stopped  AppVClient         Microsoft App-V Client
+Stopped  aspnet_state       ASP.NET State Service
+Stopped  AssignedAccessMan… AssignedAccessManager Service
+Stopped  autotimesvc        Cellular Time
+Stopped  AxInstSV           ActiveX Installer (AxInstSV)
+Stopped  BcastDVRUserServi… GameDVR and Broadcast User Service_dd…
+Stopped  BDESVC             BitLocker Drive Encryption Service
+Stopped  BluetoothUserServ… Bluetooth User Support Service_dd6f9
+Stopped  BTAGService        Bluetooth Audio Gateway Service
+Stopped  c2wts              Claims to Windows Token Service
+Stopped  ClipSVC            Client License Service (ClipSVC)
+Stopped  cloudidsvc         Microsoft Cloud Identity Service
+Stopped  COMSysApp          COM+ System Application
+Stopped  ConsentUxUserSvc_… ConsentUX User Service_dd6f9
+Stopped  CredentialEnrollm… CredentialEnrollmentManagerUserSvc_dd…
+Stopped  CscService         Offline Files
+Stopped  defragsvc          Optimize drives
+Stopped  DeveloperToolsSer… Developer Tools Service
+Stopped  DeviceAssociation… DeviceAssociationBroker_dd6f9
+Stopped  DevicePickerUserS… DevicePicker_dd6f9
+Stopped  diagnosticshub.st… Microsoft (R) Diagnostics Hub Standar…
+Stopped  diagsvc            Diagnostic Execution Service
+Stopped  DialogBlockingSer… DialogBlockingService
+Stopped  DmEnrollmentSvc    Device Management Enrollment Service
+Stopped  dmwappushservice   Device Management Wireless Applicatio…
+Stopped  dot3svc            Wired AutoConfig
+Stopped  DsmSvc             Device Setup Manager
+Stopped  DsRoleSvc          DS Role Server
+Stopped  EasyAntiCheat      EasyAntiCheat
+Stopped  edgeupdate         Microsoft Edge Update Service (edgeup…
+Stopped  edgeupdatem        Microsoft Edge Update Service (edgeup…
+Stopped  embeddedmode       Embedded Mode
+Stopped  EntAppSvc          Enterprise App Management Service
+Stopped  EpicOnlineServices Epic Online Services
+Stopped  Fax                Fax
+Stopped  FontCache3.0.0.0   Windows Presentation Foundation Font …
+Stopped  FrameServer        Windows Camera Frame Server
+Stopped  FrameServerMonitor Windows Camera Frame Server Monitor
+Stopped  FvSvc              NVIDIA FrameView SDK service
+Stopped  gcs                Hyper-V Guest Compute Service
+Stopped  GoogleChromeEleva… Google Chrome Elevation Service (Goog…
+Stopped  gpsvc              Group Policy Client
+Stopped  GraphicsPerfSvc    GraphicsPerfSvc
+Stopped  gupdate            Google Update Service (gupdate)
+Stopped  gupdatem           Google Update Service (gupdatem)
+Stopped  HgClientService    Host Guardian Client Service
+Stopped  icssvc             Windows Mobile Hotspot Service
+Stopped  Intel(R) Capabili… Intel(R) Capability Licensing Service…
+Stopped  Intel(R) TPM Prov… Intel(R) TPM Provisioning Service
+Stopped  IpxlatCfgSvc       IP Translation Configuration Service
+Stopped  KNDBWM             KNDBWM
+Stopped  KtmRm              KtmRm for Distributed Transaction Coo…
+Stopped  lltdsvc            Link-Layer Topology Discovery Mapper
+Stopped  LxpSvc             Language Experience Service
+Stopped  LxssManager        LxssManager
+Stopped  MapsBroker         Downloaded Maps Manager
+Stopped  McComponentHostSe… McAfee Security Scan Component Host S…
+
+Get-Service: Service 'McpManagementService (McpManagementService)' cannot be queried due to the following error:
+
+[91mGet-Service: [91mService 'McpManagementService (McpManagementService)' cannot be queried due to the following error: [0m
+Stopped  McpManagementServ… McpManagementService
+Stopped  MessagingService_… MessagingService_dd6f9
+Stopped  MicrosoftEdgeElev… Microsoft Edge Elevation Service (Mic…
+Stopped  Minecraft Educati… Minecraft Education Updater
+Stopped  MixedRealityOpenX… Windows Mixed Reality OpenXR Service
+Stopped  MozillaMaintenance Mozilla Maintenance Service
+Stopped  MSDTC              Distributed Transaction Coordinator
+Stopped  MSiSCSI            Microsoft iSCSI Initiator Service
+Stopped  msiserver          Windows Installer
+Stopped  MsKeyboardFilter   Microsoft Keyboard Filter
+Stopped  NaturalAuthentica… Natural Authentication
+Stopped  NcaSvc             Network Connectivity Assistant
+Stopped  Netlogon           Netlogon
+Stopped  NlaSvc             Network Location Awareness
+
+Get-Service: Service 'NPSMSvc_dd6f9 (NPSMSvc_dd6f9)' cannot be queried due to the following error:
+
+[91mGet-Service: [91mService 'NPSMSvc_dd6f9 (NPSMSvc_dd6f9)' cannot be queried due to the following error: [0m
+Stopped  Origin Client Ser… Origin Client Service
+Stopped  Origin Web Helper… Origin Web Helper Service
+Stopped  ose64              Office 64 Source Engine
+Stopped  OverwolfUpdater    Overwolf Updater Windows SCM
+Stopped  p2pimsvc           Peer Networking Identity Manager
+Stopped  p2psvc             Peer Networking Grouping
+Stopped  P9RdrService_dd6f9 P9RdrService_dd6f9
+Stopped  PDFescape Desktop… PDFescape Desktop Creator
+Stopped  PeerDistSvc        BranchCache
+Stopped  PenService_dd6f9   PenService_dd6f9
+Stopped  perceptionsimulat… Windows Perception Simulation Service
+Stopped  PerfHost           Performance Counter DLL Host
+Stopped  pla                Performance Logs & Alerts
+Stopped  PNRPAutoReg        PNRP Machine Name Publication Service
+Stopped  PNRPsvc            Peer Name Resolution Protocol
+Stopped  PolicyAgent        IPsec Policy Agent
+Stopped  PrintNotify        Printer Extensions and Notifications
+Stopped  PrintWorkflowUser… PrintWorkflow_dd6f9
+Stopped  PushToInstall      Windows PushToInstall Service
+Stopped  QWAVE              Quality Windows Audio Video Experience
+Stopped  RasAuto            Remote Access Auto Connection Manager
+Stopped  RemoteAccess       Routing and Remote Access
+Stopped  RemoteRegistry     Remote Registry
+Stopped  RetailDemo         Retail Demo Service
+Stopped  RpcLocator         Remote Procedure Call (RPC) Locator
+Stopped  SCardSvr           Smart Card
+Stopped  ScDeviceEnum       Smart Card Device Enumeration Service
+Stopped  SCPolicySvc        Smart Card Removal Policy
+Stopped  SDRSVC             Windows Backup
+Stopped  seclogon           Secondary Logon
+Stopped  SEMgrSvc           Payments and NFC/SE Manager
+Stopped  Sense              Windows Defender Advanced Threat Prot…
+Stopped  SensorDataService  Sensor Data Service
+Stopped  SensorService      Sensor Service
+Stopped  SensrSvc           Sensor Monitoring Service
+Stopped  SharedRealitySvc   Spatial Data Service
+Stopped  shpamsvc           Shared PC Account Manager
+Stopped  smphost            Microsoft Storage Spaces SMP
+Stopped  SmsRouter          Microsoft Windows SMS Router Service.
+Stopped  SNMPTrap           SNMP Trap
+Stopped  spectrum           Windows Perception Service
+Stopped  sppsvc             Software Protection
+Stopped  SQLAgent$SQLEXPRE… SQL Server Agent (SQLEXPRESS)
+Stopped  SQLBrowser         SQL Server Browser
+Stopped  ssh-agent          OpenSSH Authentication Agent
+
+Get-Service: Service 'SshdBroker (SshdBroker)' cannot be queried due to the following error:
+
+[91mGet-Service: [91mService 'SshdBroker (SshdBroker)' cannot be queried due to the following error: [0m
+Stopped  Steam Client Serv… Steam Client Service
+Stopped  StiSvc             Windows Image Acquisition (WIA)
+Stopped  svsvc              Spot Verifier
+Stopped  swprv              Microsoft Software Shadow Copy Provid…
+Stopped  TapiSrv            Telephony
+Stopped  TieringEngineServ… Storage Tiers Management
+Stopped  TroubleshootingSvc Recommended Troubleshooting Service
+Stopped  TrustedInstaller   Windows Modules Installer
+Stopped  TwitchService      Twitch Service
+Stopped  tzautoupdate       Auto Time Zone Updater
+Stopped  UevAgentService    User Experience Virtualization Service
+Stopped  VacSvc             Volumetric Audio Compositor Service
+Stopped  vds                Virtual Disk
+Stopped  vgc                vgc
+Stopped  vmicguestinterface Hyper-V Guest Service Interface
+Stopped  vmicheartbeat      Hyper-V Heartbeat Service
+Stopped  vmickvpexchange    Hyper-V Data Exchange Service
+Stopped  vmicrdv            Hyper-V Remote Desktop Virtualization…
+Stopped  vmicshutdown       Hyper-V Guest Shutdown Service
+Stopped  vmictimesync       Hyper-V Time Synchronization Service
+Stopped  vmicvmsession      Hyper-V PowerShell Direct Service
+Stopped  vmicvss            Hyper-V Volume Shadow Copy Requestor
+Stopped  VSS                Volume Shadow Copy
+Stopped  VSStandardCollect… Visual Studio Standard Collector Serv…
+Stopped  w3logsvc           W3C Logging Service
+Stopped  WaaSMedicSvc       Windows Update Medic Service
+Stopped  WalletService      WalletService
+Stopped  WarpJITSvc         Warp JIT Service
+Stopped  wbengine           Block Level Backup Engine Service
+Stopped  WbioSrvc           Windows Biometric Service
+Stopped  WebManagement      Web Management
+
+Get-Service: Service 'WebManagementUser_dd6f9 (WebManagementUser_dd6f9)' cannot be queried due to the following error:
+
+[91mGet-Service: [91mService 'WebManagementUser_dd6f9 (WebManagementUser_dd6f9)' cannot be queried due to the following error: [0m
+Stopped  WebManagementUser… WebManagementUser_dd6f9
+Stopped  Wecsvc             Windows Event Collector
+Stopped  WEPHOSTSVC         Windows Encryption Provider Host Serv…
+Stopped  wercplsupport      Problem Reports Control Panel Support
+Stopped  WerSvc             Windows Error Reporting Service
+Stopped  WFDSConMgrSvc      Wi-Fi Direct Services Connection Mana…
+Stopped  WiaRpc             Still Image Acquisition Events
+Stopped  WinRM              Windows Remote Management (WS-Managem…
+Stopped  wisvc              Windows Insider Service
+Stopped  wlpasvc            Local Profile Assistant Service
+Stopped  WManSvc            Windows Management Service
+Stopped  wmiApSrv           WMI Performance Adapter
+Stopped  WMSVC              Web Management Service
+Stopped  workfolderssvc     Work Folders
+Stopped  WpcMonSvc          Parental Controls
+Stopped  WPDBusEnum         Portable Device Enumerator Service
+Stopped  wuauserv           Windows Update
+Stopped  WwanSvc            WWAN AutoConfig
+Stopped  XblGameSave        Xbox Live Game Save
+Stopped  XboxGipSvc         Xbox Accessory Management Service
+Stopped  XboxNetApiSvc      Xbox Live Networking Service
+Stopped  xTendSoftAPService xTendSoftAPService
+
+PS X:\repos\csharp-blazor-bug-tracking> @{ 'computerName' = if ([Environment]::MachineName) {[Environment]::MachineName}  else {'localhost'}; 'processId' = $PID; 'instanceId' = $host.InstanceId }
+
+Name                           Value
+----                           -----
+computerName                   REDPANDA
+instanceId                     9f36eded-f7e4-4654-9733-39c8f37a48e9
+processId                      10268
+
+PS X:\repos\csharp-blazor-bug-tracking> Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20211108062730
+**********************

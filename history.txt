@@ -1,0 +1,30 @@
+
+  Id     Duration CommandLine
+  --     -------- -----------
+   1        1.945 get-command
+   2        0.014 cls
+   3        0.108 get-help
+   4        0.001 cls
+   5       51.422 get-help | more
+   6        0.001 cls
+   7        0.091 get-help
+   8        0.001 cls
+   9       20.071 get-help | more
+  10        0.001 cls
+  11        8.203 get-help -Examples | more
+  12        0.001 cls
+  13        0.097 get-help help
+  14        0.119 get-help get-help -Detailed
+  15        0.001 cls
+  16        2.791 help *about*
+  17        0.001 cls
+  18        0.558 Get-command -Verb Get
+  19        0.001 cls
+  20        0.387 get-command -Name *Ip* -Module NetTCPIP
+  21        0.131 get-help Get-NetIPAddress
+  22        0.002 cls
+  23     6:24.986 help Get-NetIPAddress -Examples | more
+  24        0.002 cls
+  25        0.026 Get-History
+  26        0.001 cls
+
